@@ -1,0 +1,2 @@
+#!/bin/bash
+(echo .; echo ..; ls -A1 | grep -v '^\.\?$' | sort -f) | awk '{if (NR==1) printf "%s", $0; else printf ", %s", $0} END {print ""}' | sed 's,\([^,]*\)/,\1&,g'
