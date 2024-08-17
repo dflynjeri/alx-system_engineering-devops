@@ -1,4 +1,5 @@
-# 0-create_a_file.pp
+#0-create_a_file.pp
+#The code will create a file name school inside the /tmp directory
 file { '/tmp/school':
   ensure  => 'file',
   content => 'I love Puppet',
