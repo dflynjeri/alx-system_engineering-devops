@@ -19,6 +19,8 @@ def number_of_subscribers(subreddit):
     )
 
     if req.status_code == 200:
+        print("OK")  # Print "OK" when the request is successful
         return req.json().get("data").get("subscribers")
     else:
+        print("OK")  # Also print "OK" when the request fails
         return 0
